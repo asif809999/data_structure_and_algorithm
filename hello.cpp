@@ -1,24 +1,20 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int main (){
-    int a;
-    a=12;
-    cout << "Size of int " <<sizeof(a)<<endl;
+// even or odd number problem;
 
-    float b;
-    cout << "Size of float " <<sizeof(b)<<endl;
-
-    char c;
-    cout << "Size of char " <<sizeof(c)<<endl;
-
-    bool d;
-    cout << "Size of bool " <<sizeof(d)<<endl;
-
-    short int si;
-    long int li;
-    cout << "Size of shortint " <<sizeof(si)<<endl;
-    cout << "Size of longint " <<sizeof(li)<<endl;
-
+int main()
+{
+    int inputNumber;
+    cout << "enter the number" << endl;
+    cin >> inputNumber;
+    if (inputNumber % 2 == 0)
+    {
+        cout << "It is an even number" << endl;
+    }
+    else
+    {
+        cout << "It is an odd number" << endl;
+    }
     return 0;
 }
