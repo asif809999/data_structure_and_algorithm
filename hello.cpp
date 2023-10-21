@@ -1,20 +1,26 @@
 #include <iostream>
 using namespace std;
 
-// even or odd number problem;
+// print the maximum number problem;
 
 int main()
 {
-    int inputNumber;
-    cout << "enter the number" << endl;
-    cin >> inputNumber;
-    if (inputNumber % 2 == 0)
-    {
-        cout << "It is an even number" << endl;
+    int a,b,c;
+    cout << "enter 3 numbers" << endl;
+    cin>>a>>b>>c;
+    if (a>b){
+        if(a>c){
+            cout<<a<< endl;
+        }
+        else{
+            cout<<c<< endl;
+        }
     }
-    else
-    {
-        cout << "It is an odd number" << endl;
+    else if(b>c){
+        cout<<b<< endl;
+    }
+    else{
+        cout<<c<< endl;
     }
     return 0;
 }
