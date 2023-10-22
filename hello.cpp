@@ -1,26 +1,23 @@
 #include <iostream>
 using namespace std;
 
-// print the maximum number problem;
+/* You are given an integer n. Check if n has an odd divisor,greater than one
+(does there exist such a number x (x>1) that n is divisible by x and x is odd).
+For example, if n=6, then there is x=3. If n=4, then such a number does not exist.
+Codeforces Round 697 (Div. 3) */
 
 int main()
 {
-    int a,b,c;
-    cout << "enter 3 numbers" << endl;
-    cin>>a>>b>>c;
-    if (a>b){
-        if(a>c){
-            cout<<a<< endl;
-        }
-        else{
-            cout<<c<< endl;
-        }
+    int n, sum;
+    cout << "enter n: ";
+    cin >> n;
+    sum = 0;
+
+    for (int counter = 1; counter <= n; counter++)
+    {
+        sum = sum + counter;
     }
-    else if(b>c){
-        cout<<b<< endl;
-    }
-    else{
-        cout<<c<< endl;
-    }
+
+    cout << sum << endl;
     return 0;
 }
