@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// operators;
+// paterns;
 
 int main()
 {
@@ -12,9 +12,17 @@ int main()
     cin >> numberOfColumn;
     for (int i = 1; i <= numberOfRows; i++)
     {
+    
         for (int j = 1; j <= numberOfColumn; j++)
         {
-            cout << "*";
+            if( i==1 || i==numberOfRows || j==1 || j==numberOfColumn){
+                cout << "*";
+   
+            }
+            else {
+                cout<< " ";
+            }
+            
         }
         cout <<endl;
     }
