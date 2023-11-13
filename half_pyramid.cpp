@@ -11,9 +11,17 @@ int main()
 
     for (int i = 1; i <= numberOfRows; i++)
     {
-        for (int j = numberOfRows; i <= j; j--)
+        for (int j = 1; j <= numberOfRows; j++)
         {
-            cout << "*";
+            if (j <= numberOfRows - i)
+            {
+                cout << "  ";
+            }
+            else
+            {
+                cout << " *";
+            }
+            
         }
         cout << endl;
     }
