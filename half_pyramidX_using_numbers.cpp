@@ -1,8 +1,6 @@
 #include <iostream>
 using namespace std;
 
-// paterns;
-
 int main()
 {
     int numberOfRows;
@@ -11,17 +9,9 @@ int main()
 
     for (int i = 1; i <= numberOfRows; i++)
     {
-        for (int j = 1; j <= numberOfRows; j++)
+        for (int j = 1; j <= i; j++)
         {
-            if (j <= numberOfRows - i)
-            {
-                cout << "  ";
-            }
-            else
-            {
-                cout << " *";
-            }
-            
+            cout << i <<" ";    
         }
         cout << endl;
     }
