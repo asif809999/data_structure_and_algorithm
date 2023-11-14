@@ -3,7 +3,9 @@ using namespace std;
 
 int main()
 {
-    int numberOfRows;
+    int numberOfRows; 
+    
+    int counter = 1;
     cout << "enter number of row: " << endl;
     cin >> numberOfRows;
 
@@ -11,7 +13,8 @@ int main()
     {
         for (int j = 1; j <= i; j++)
         {
-            cout << i <<" ";    
+            cout << counter <<" ";
+            counter++;    
         }
         cout << endl;
     }
