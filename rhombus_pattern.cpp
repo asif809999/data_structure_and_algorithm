@@ -7,18 +7,20 @@ int main()
 
     cout << "enter number of row: " << endl;
     cin >> numberOfRows;
-    
+
     for (int i = 1; i <= numberOfRows; i++)
     {
 
-        for (int numberOfColumn = 1; numberOfColumn <= i; numberOfColumn++)
+        for (int j = i; j <= numberOfRows - 1; j++)
         {
-            if((i+numberOfColumn)%2 == 0) {
-                cout<< " 1";
-            }
-            else{
-                cout<< " 0";
-            }
+            cout << " ";
+        }
+
+        for (int j = 1; j <= numberOfRows; j++)
+
+        {
+
+            cout << " *";
         }
         cout << endl;
     }
