@@ -10,18 +10,19 @@ int main()
 
     for (int i = 1; i <= numberOfRows; i++)
     {
-
         for (int j = i; j <= numberOfRows - 1; j++)
         {
-            cout << " ";
-        }
-
-        for (int j = 1; j <= i; j++)
-
+            cout << "  ";
+        };
+        int z =i;
+        for (int j = 1; j <= z; z--)
         {
-
-            cout << " "<<j;
+            cout << z << " ";
         }
-        cout << endl;
-    }
+        for (int j = 2; j <= i; j++)
+        {
+            cout << j << " ";
+        }
+         cout << endl;
+    } 
 }
