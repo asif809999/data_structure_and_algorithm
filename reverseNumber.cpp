@@ -3,17 +3,13 @@ using namespace std;
 
 int main()
 {
-    int inputNumber, reversedNumber, lastDigit;
-    cout << "enter the number: " << endl;
-    cin >> inputNumber;
+    int a = 4;
+    int b = 6;
 
-    reversedNumber = 0;
-    while (inputNumber > 0)
-    {
-        lastDigit = inputNumber % 10 ;
-        reversedNumber = reversedNumber * 10 + lastDigit;
-        inputNumber = inputNumber / 10;
-    }
-    cout<<reversedNumber<<endl;
+    cout<<" a&b " << (a&b) << endl;
+    cout<<" a|b " << (a|b) << endl;
+    cout<<" ~a " << (~a) << endl;
+    cout<<" a^b " << (a^b) << endl;
+
     return 0;
 }
