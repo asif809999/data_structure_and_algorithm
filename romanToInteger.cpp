@@ -1,39 +1,36 @@
 #include <iostream>
-//#include <math.h>
+// #include <math.h>
 #include <string>
-#include <unordered_map>
+// #include <unordered_map>
 using namespace std;
 
-int romanToInt(string romanNumber)
+int lengthOfLastWord(string words)
 {
-    int answer = 0;
-    unordered_map<char,int> valuesOfString;
-    valuesOfString['I'] = 1;
-    valuesOfString['V'] = 5;
-    valuesOfString['X'] = 10;
-    valuesOfString['L'] = 50;
-    valuesOfString['C'] = 100;
-    valuesOfString['D'] = 500;
-    valuesOfString['M'] = 1000;
-    
-    for (int i = 0; i < romanNumber.length(); i++)
+    int size = words.size();
+    int lastWordLength = 0;
+    int wordIndex = size - 1;
+    int flag = 0;
+
+    while (wordIndex >= 0)
     {
-        if (valuesOfString[romanNumber[i]] < valuesOfString[romanNumber[i + 1]])
+        if (words[wordIndex] == ' ' && flag)
+            break;
+        if (words[wordIndex] != ' ')
         {
-            answer = answer - valuesOfString[romanNumber[i]];
+
+            lastWordLength++;
+            flag = 1;
         }
-        else
-        {
-            answer = answer + valuesOfString[romanNumber[i]];
-        }
+
+        wordIndex--;
     }
-    return answer;
+    return lastWordLength;
 }
+
 int main()
 {
-  
 
-    int finalAnswer = romanToInt("VI");
+    int finalAnswer = lengthOfLastWord("Love nepal  ");
     cout << finalAnswer;
 
     return 0;
