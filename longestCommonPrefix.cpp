@@ -7,19 +7,22 @@ using namespace std;
 #include <bits/stdc++.h>
 string longestCommonPrefix(vector<string> &strs)
 {
-    int n =strs.size();
-    if(n==0)return "";
-    string answer="";
+    int n = strs.size();
+    if (n == 0)
+        return "";
+    string answer = "";
     sort(begin(strs), end(strs));
-    string a=strs[0];
-    string b=strs[n-1];
+    string a = strs[0];
+    string b = strs[n - 1];
 
     for (int i = 0; i < a.size(); i++)
     {
-        if(a[i]==b[i]){
-            answer=answer+a[i];
+        if (a[i] == b[i])
+        {
+            answer = answer + a[i];
         }
-        else {
+        else
+        {
             break;
         }
     }
@@ -28,7 +31,6 @@ string longestCommonPrefix(vector<string> &strs)
 
 int main()
 {
-    
 
     return 0;
 }
