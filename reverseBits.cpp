@@ -3,21 +3,19 @@ using namespace std;
 // #include <math.h>
 // #include <string>
 // #include <unordered_map>
-//#include <vector>
+#include <vector>
 // #include <bits/stdc++.h>
 
-uint32_t reverseBits(uint32_t n)
+int singleNumber(vector<int> &nums)
 {
-    int power = 31;
-    uint32_t result = 0;
-
-    while (n != 0)
+    int a = nums[0];
+    int size = nums.size();
+    for (int i = 1; i < size; i++)
     {
-        result += ((n & 1) << power);
-        power--;
-        n = n >> 1;
+        a = a ^ nums[i];
     }
-    return result;
+
+    return a;
 }
 
 int main()
