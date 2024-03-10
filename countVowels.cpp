@@ -7,26 +7,33 @@ using namespace std;
 // #include <sstream>
 #include <bits/stdc++.h>
 
-
-void vowelCount(string checkVowel)
+int maxVowels(string s, int k)
 {
-    int Count = 0, numberOfCharacter = checkVowel.size();
-    ;
-    bool vowel[26] = {false};
-    vowel[0] = vowel[4] = vowel[8] = vowel[14] = vowel[20] = true;
+    int currentCount = 0;
+    int answer = 0;
 
-    for (int i = 0; i < numberOfCharacter; i++)
+    int vowels[26] = {1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0};
+
+    int n = s.size();
+
+    for (int i = 0; i < n; i++)
     {
-        if (vowel[checkVowel[i] - 'a'])
+
+        currentCount += vowels[s[i] - 'a'];
+
+        if (i >= k)
         {
-            Count += 1;
+            currentCount -= vowels[s[i - k] - 'a'];
         }
+
+        answer = max(answer, currentCount);
     }
-    cout << Count;
+    return answer;
 }
 
 int main()
 {
-    vowelCount("zue");
+    int finalAnswer = maxVowels("leetcode", 3);
+    cout << finalAnswer << endl;
     return 0;
 }
