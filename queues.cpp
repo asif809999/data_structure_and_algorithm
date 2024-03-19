@@ -20,7 +20,7 @@ void showQueue(queue<int> generalQueue)
 
 int main()
 {
-    queue<int> inputQueue;
+    queue<int> inputQueue, inputQueue2;
     inputQueue.push(10);
     inputQueue.push(20);
     inputQueue.push(30);
@@ -33,5 +33,13 @@ int main()
     cout << "\ninputQueue.pop()";
     inputQueue.pop();
     showQueue(inputQueue);
+
+    inputQueue2.push(50);
+    inputQueue2.push(60);
+    inputQueue2.push(70);
+    showQueue(inputQueue2);
+    inputQueue.swap(inputQueue2);
+    showQueue(inputQueue2);
+
     return 0;
 }
