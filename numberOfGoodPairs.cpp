@@ -1,30 +1,21 @@
 using namespace std;
 #include <bits/stdc++.h>
 
-void push(Node **head_ref, int new_data)
+int numIdenticalPairs(vector<int> &nums)
 {
-    Node *new_node = new Node();
-    new_data->data = new data();
-    new_node->next = (*head_ref);
-    (*head_ref) = new_node;
-}
-
-void insertAfter(Node *previous_node, int new_data)
-{
-
-    if (previous_node == NULL)
+    int count = 0;
+    for (int i = 0; i < nums.size(); i++)
     {
-        cout << "given previous node can not be NULL";
-        return;
+        for (int j = i + 1; j < nums.size(); j++)
+        {
+            if (nums[i] == nums[j] && i < j)
+            {
+                count++;
+            }
+        }
     }
-    Node *new_node = new Node();
-    new_data->data = new data();
-    new_node->next = previous_node->next;
-    previous_node->next = new_node;
+    return count;
 }
-
 int main()
 {
-
-    return 0;
 }
